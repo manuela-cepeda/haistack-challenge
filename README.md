@@ -4,7 +4,8 @@ Coding challenge presented to candidates interviewing for a role at [Haistack.AI
 
 _#findyourneedle_
 
-Challenge Description
+# Challenge Description
+
 You need to create a simple CRUD application for managing a list of items. The application should use React, TypeScript, React Router, Prettier for code formatting, the Material-UI library for components, Redux for state management, and fake API calls to return static data. Additionally, create a custom Material-UI component and organize it into a separate folder.
 
 Requirements:
@@ -57,7 +58,7 @@ Requirements:
 
 18. Provide clear instructions on how to run the project, including any required dependencies and setup steps.
 
------- Also, some nice-to-have items that would add some extra to the challenge ------
+# Nice-to-have items that would add some extra to the challenge
 
 Code Organization: Maintain a clean and organized project structure with a clear separation of concerns, grouping related components and files together.
 
