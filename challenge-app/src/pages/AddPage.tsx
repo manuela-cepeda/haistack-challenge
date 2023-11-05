@@ -1,9 +1,5 @@
-import React from 'react'
+const AddPage = (): JSX.Element => {
+	return <div>AddPage</div>;
+};
 
-const AddPage = () => {
-  return (
-    <div>AddPage</div>
-  )
-}
-
-export default AddPage
+export default AddPage;

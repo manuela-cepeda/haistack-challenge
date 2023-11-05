@@ -1,9 +1,5 @@
-import React from 'react'
+const NavBar = (): JSX.Element => {
+	return <div>NavBar</div>;
+};
 
-const NavBar = () => {
-  return (
-    <div>NavBar</div>
-  )
-}
-
-export default NavBar
+export default NavBar;

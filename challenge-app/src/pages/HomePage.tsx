@@ -1,21 +1,21 @@
-import React, {useEffect} from 'react';
+import { useEffect } from 'react';
 import { useAppDispatch } from '../store/hooks';
-import { fetchItems } from '../store/thunks';
+import { getItems } from '../store/thunks';
 import ItemList from '../components/ItemList';
 
-const HomePage = () => {
-    const dispatch = useAppDispatch();
+const HomePage = (): JSX.Element => {
+	const dispatch = useAppDispatch();
 
-    useEffect(() => {
-        dispatch(fetchItems())
-    }, [])
-    
-  return (
-    <>
-        <div>HomePage</div>
-        <ItemList />
-    </>
-  )
-}
+	useEffect(() => {
+		dispatch(getItems());
+	}, []);
 
-export default HomePage
+	return (
+		<>
+			<div>HomePage</div>
+			<ItemList />
+		</>
+	);
+};
+
+export default HomePage;

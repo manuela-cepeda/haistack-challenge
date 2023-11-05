@@ -1,9 +1,5 @@
-import React from 'react'
+const EditPage = (): JSX.Element => {
+	return <div>EditPage</div>;
+};
 
-const EditPage = () => {
-  return (
-    <div>EditPage</div>
-  )
-}
-
-export default EditPage
+export default EditPage;
