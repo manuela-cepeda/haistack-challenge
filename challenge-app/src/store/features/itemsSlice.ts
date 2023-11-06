@@ -41,19 +41,24 @@ export const itemsSlice = createSlice({
 		});
 
 		builder.addCase(addItem.fulfilled, (state, action) => {
-			state.items.push(action.payload);
+			const newItem = {
+				"id": action.payload.id,
+				"name":  action.payload.title,
+				"description": action.payload.description
+			}
+			state.items.push(newItem);
 			state.status = 'success';	
 			state.notification = 'item successfully added'
 
 		});
 
 		builder.addCase(updateItem.fulfilled, (state, action) => {
-			const item = {
-				"id": action.payload.id,
-				"name":  action.payload.title,
-				"description": action.payload.description
+			
+			const foundItem = state.items.find(item => item.id === action.payload.id )
+			if(foundItem != null){
+				foundItem.name =  action.payload.title;
+				foundItem.description =  action.payload.description;
 			}
-			state.items.push(item);
 			state.status = 'success';
 			state.notification = 'item successfully updated'
 			
@@ -62,8 +67,6 @@ export const itemsSlice = createSlice({
 		builder.addCase(deleteItem.fulfilled, (state, action) => {
 			const {id} = action.payload
 			state.items = state.items.filter((item) => item.id !== id);
-			state.status = 'success';
-			state.notification = 'item successfully deleted'			
 		});
 	},
 });
